@@ -49,26 +49,32 @@ namespace Cash_Register
             try
             {
                 baconAmmount = Convert.ToInt16(baconBox.Text);
-             }
+                baconLabel.ForeColor = Color.Black;
+            }
              catch
-             {
+            {
+                baconLabel.ForeColor = Color.Red;
                 baconAmmount = 0;
-             }
+            }
             try
             {
                 cheeseAmmount = Convert.ToInt16(cheeseBox.Text);
+                cheeseLabel.ForeColor = Color.Black;
             }
             catch
             {
                 cheeseAmmount = 0;
+                cheeseLabel.ForeColor = Color.Red;
             }
             try
             {
                 macAmmount = Convert.ToInt16(macBox.Text);
+                macLabel.ForeColor = Color.Black;
             }
             catch
             {
                 macAmmount = 0;
+                macLabel.ForeColor = Color.Red;
             }
 
             //Calculations for total sub total tax
@@ -97,10 +103,12 @@ namespace Cash_Register
                 tenderedAmmount = Convert.ToInt16(tenderedBox.Text);
                 change = tenderedAmmount - total;
                 changeAmmountLabel.Text = change.ToString("C");
+                tenderedLabel.ForeColor = Color.Black;
             }
             catch
             {
                 tenderedAmmount = 0;
+                tenderedLabel.ForeColor = Color.Red;
             }
                               
         }
@@ -161,7 +169,13 @@ namespace Cash_Register
             tax = 0;
             total = 0;
             change = 0;
-            
+
+            baconLabel.ForeColor = Color.Black;
+            cheeseLabel.ForeColor = Color.Black;
+            macLabel.ForeColor = Color.Black;
+            tenderedLabel.ForeColor = Color.Black;
+
+
         }
 
     }

@@ -19,6 +19,7 @@ namespace Cash_Register
         const double BACONATOR = 6.99;
         const double DOUBLE_CHEESE = 4.99;
         const double BIG_MAC = 9.99;
+        const double TAX_RATE = 0.13;
 
         //Global Variables
         int baconAmmount;
@@ -72,7 +73,7 @@ namespace Cash_Register
 
             //Calculations for total sub total tax
             subTotal = BACONATOR * baconAmmount + DOUBLE_CHEESE * cheeseAmmount + BIG_MAC * macAmmount;
-            tax = subTotal * 0.13;
+            tax = subTotal * TAX_RATE;
             total = subTotal + tax;
 
             subAmmountLabel.Text = subTotal.ToString("C");
@@ -150,16 +151,18 @@ namespace Cash_Register
             cheeseBox.Clear();
             macBox.Clear();
             tenderedBox.Clear();
-
+            
             subAmmountLabel.Text = " ";
             taxAmmountLabel.Text = " ";
             totalAmmountLabel.Text = " ";
             changeAmmountLabel.Text = " ";
-
+            
             subTotal = 0;
             tax = 0;
             total = 0;
+            change = 0;
             
         }
+
     }
 }

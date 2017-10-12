@@ -34,8 +34,7 @@ namespace Cash_Register
         public cashForm()
         {
             InitializeComponent();
-
-
+                  
         }
 
         private void totalButton_Click(object sender, EventArgs e)
@@ -43,8 +42,7 @@ namespace Cash_Register
             //typing sound
             SoundPlayer typing = new SoundPlayer(Properties.Resources.typing_sound);
             typing.Play();
-
-
+            
             //Ammount inputs
             try
             {
@@ -87,8 +85,6 @@ namespace Cash_Register
             taxAmmountLabel.Text = tax.ToString("C");
             
             totalAmmountLabel.Text = total.ToString("C");
-            
-
         }
 
         private void changeButton_Click(object sender, EventArgs e)
@@ -174,9 +170,6 @@ namespace Cash_Register
             cheeseLabel.ForeColor = Color.Black;
             macLabel.ForeColor = Color.Black;
             tenderedLabel.ForeColor = Color.Black;
-
-
         }
-
     }
 }
